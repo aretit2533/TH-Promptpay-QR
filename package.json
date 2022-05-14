@@ -1,5 +1,5 @@
 {
-  "name": "promptpay-qr",
+  "name": "th-promptpay-qr",
   "version": "1.0.0",
   "description": "Thailand Promptpay QR code generator library",
   "main": "./dist/promptpay-qr.js",

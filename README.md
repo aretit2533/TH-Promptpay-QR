@@ -1,4 +1,4 @@
-# promptpay-qr
+# th-promptpay-qr
 
 Thailand Promptpay QR code library.
 
@@ -7,13 +7,13 @@ Thailand Promptpay QR code library.
 Use the node package manager [npm](https://www.npmjs.com/get-npm) to install Focal-JS.
 
 ```bash
-npm install promptpay-qr
+npm install th-promptpay-qr
 ```
 
 ## Usage
 
 ```node.js
-import promptpay-qr
+import th-promptpay-qr
 
 
 
