@@ -1,0 +1,34 @@
+{
+  "name": "promptpay-qr",
+  "version": "1.0.0",
+  "description": "Thailand Promptpay QR code generator library",
+  "main": "./dist/promptpay-qr.js",
+  "types": "./dist/promptpay-qr.d.ts",
+  "scripts": {
+    "start": "node ./dist/promptpay-qr.js",
+    "build": "tsc",
+    "test": "jest",
+    "coverage": "jest --collectCoverage --expand",
+    "all": "npm run build && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aretit2533/TH-Promptpay-QR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aretit2533/TH-Promptpay-QR/issues"
+  },
+  "author": "Atit Plangson",
+  "license": "MIT",
+  "keywords": [
+    "promptpay",
+    "QR"
+  ],
+  "dependencies": {
+    "@types/qrcode": "^1.4.2",
+    "crc": "^4.1.1",
+    "jest": "^28.1.0",
+    "jest-cli": "^28.1.0",
+    "qrcode": "^1.5.0"
+  }
+}
