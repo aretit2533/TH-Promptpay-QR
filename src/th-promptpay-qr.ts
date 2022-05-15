@@ -2,7 +2,7 @@ import QRCode from 'qrcode'
 import crc from 'crc'
 let applicationID = "A000000677010111";
 
-function getPromptpayCode(promptpayAccount: string, amount?: number) {
+export function getPromptpayCode(promptpayAccount: string, amount?: number) {
     // Type Length Value
     // First 2 byte: type
     // Second 2 byte: length of value
@@ -41,23 +41,17 @@ function getPromptpayCode(promptpayAccount: string, amount?: number) {
     return promptpayCode;
 }
 
-function getQRCodeString(promptpayAccount: string, amount?: number) {
+export function getQRCodeString(promptpayAccount: string, amount?: number) {
     let promtpayCode = getPromptpayCode(promptpayAccount, amount);
     let qrCode = QRCode.toString(promtpayCode);
     return qrCode;
 }
 
-function getQRCodePNG(promptpayAccount: string, amount?: number, callback?: (error: Error, png: string) => void) {
+export function getQRCodePNG(promptpayAccount: string, amount?: number, callback?: (error: Error, png: string) => void) {
     let promtpayCode = getPromptpayCode(promptpayAccount, amount);
     if (callback) {
         return QRCode.toDataURL(promtpayCode, callback);
     } else {
         return QRCode.toDataURL(promtpayCode);
     }
-}
-
-module.exports = {
-    getPromptpayCode,
-    getQRCodeString,
-    getQRCodePNG
 }
