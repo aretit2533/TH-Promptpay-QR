@@ -4,7 +4,7 @@ Thailand Promptpay QR code library.
 
 ## Installation
 
-Use the node package manager [npm](https://www.npmjs.com/get-npm) to install Focal-JS.
+Use the node package manager [npm](https://www.npmjs.com/get-npm) to install TH-Promptpay-QR.
 
 ```bash
 npm install th-promptpay-qr
@@ -24,7 +24,7 @@ let promptpayQRString = getQRCodeString('0812345678', 300);
 
 //OR
 // Retrurn png base64 encoding.
- 
+
 getQRCodePNG('0812345678', 300, (err, png) => {
     console.log(png);
 })
