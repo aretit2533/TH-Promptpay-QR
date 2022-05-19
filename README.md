@@ -13,6 +13,28 @@ npm install th-promptpay-qr
 ## Usage
 
 ```node.js
+// Node JS
+var thPromptpayQr = require("th-promptpay-qr")
+
+let promptpayCode = thPromptpayQr.getPromptpayCode('0812345678', 300);
+
+// OR
+// Return QR code as string drawing.
+
+var promptpayQRString = thPromptpayQr.getQRCodeString('0812345678', 300);
+
+//OR
+// Retrurn png base64 encoding.
+
+thPromptpayQr.getQRCodePNG('0812345678', 300, (err, png) => {
+    console.log(png);
+})
+
+console.log(promptpayQRString);
+```
+
+```node.js
+// Type Script
 import {getPromptpayCode, getQRCodeString, getQRCodePNG} from 'th-promptpay-qr';
 
 let promptpayCode = getPromptpayCode('0812345678', 300);
