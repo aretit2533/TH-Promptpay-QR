@@ -41,13 +41,16 @@ export function getPromptpayCode(promptpayAccount: string, amount?: number) {
     return promptpayCode;
 }
 
-export function getQRCodeString(promptpayAccount: string, amount?: number) {
+export function getQRCodeString(promptpayAccount: string, amount?: number, callback?: (error: Error | null | undefined, qr: string) => void) {
     let promtpayCode = getPromptpayCode(promptpayAccount, amount);
-    let qrCode = QRCode.toString(promtpayCode);
-    return qrCode;
+    if (callback) {
+        return QRCode.toString(promtpayCode, {type:'terminal'}, callback);
+    } else {
+        return QRCode.toString(promtpayCode);
+    }
 }
 
-export function getQRCodePNG(promptpayAccount: string, amount?: number, callback?: (error: Error, png: string) => void) {
+export function getQRCodePNG(promptpayAccount: string, amount?: number, callback?: (error: Error | null | undefined, png: string) => void) {
     let promtpayCode = getPromptpayCode(promptpayAccount, amount);
     if (callback) {
         return QRCode.toDataURL(promtpayCode, callback);

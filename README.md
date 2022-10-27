@@ -21,7 +21,9 @@ let promptpayCode = thPromptpayQr.getPromptpayCode('0812345678', 300);
 // OR
 // Return QR code as string drawing.
 
-var promptpayQRString = thPromptpayQr.getQRCodeString('0812345678', 300);
+thPromptpayQr.getQRCodeString('0812345678', 300 (err, qr) => {
+    console.log(qr);
+})
 
 //OR
 // Retrurn png base64 encoding.
@@ -42,7 +44,9 @@ let promptpayCode = getPromptpayCode('0812345678', 300);
 // OR
 // Return QR code as string drawing.
 
-let promptpayQRString = getQRCodeString('0812345678', 300);
+getQRCodeString('0812345678', 300, (err, qr) => {
+    console.log(qr);
+})
 
 //OR
 // Retrurn png base64 encoding.
