@@ -21,7 +21,7 @@ let promptpayCode = thPromptpayQr.getPromptpayCode('0812345678', 300);
 // OR
 // Return QR code as string drawing.
 
-thPromptpayQr.getQRCodeString('0812345678', 300 (err, qr) => {
+thPromptpayQr.getQRCodeString('0812345678', 300, (err, qr) => {
     console.log(qr);
 })
 
